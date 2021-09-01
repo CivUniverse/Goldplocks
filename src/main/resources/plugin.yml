@@ -1,0 +1,6 @@
+name: Goldplocks
+version: '${project.version}'
+main: com.civuniverse.goldplocks.Goldplocks
+api-version: 1.17
+description: A simple plugin for gold-block elevators based on the CivRealms gold block elevator concept.
+website: https://civuniverse.com

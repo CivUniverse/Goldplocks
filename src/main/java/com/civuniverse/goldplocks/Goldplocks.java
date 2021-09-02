@@ -1,5 +1,7 @@
 package com.civuniverse.goldplocks;
 
+import org.bukkit.World;
+import org.bukkit.entity.Player;
 import org.bukkit.event.Listener;
 import org.bukkit.plugin.java.JavaPlugin;
 import org.bukkit.Location;
@@ -9,6 +11,7 @@ import org.bukkit.event.EventPriority;
 import org.bukkit.event.player.PlayerInteractEvent;
 import org.bukkit.inventory.EquipmentSlot;
 import org.bukkit.util.Vector;
+import org.bukkit.Sound;
 
 import java.util.logging.Level;
 
@@ -92,6 +95,8 @@ public final class Goldplocks extends JavaPlugin implements Listener {
                     }
                     event.getPlayer().teleport(loc);
                     event.getPlayer().setVelocity(new Vector(0, 0, 0));
+                    World world = loc.getWorld();
+                    world.playSound(loc, Sound.ENTITY_ENDERMAN_TELEPORT, 1.0f, 1.0f);
                 }
             }
         }
